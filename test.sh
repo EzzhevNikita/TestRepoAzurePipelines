@@ -1,5 +1,6 @@
 #!/bin/bash
 
+ps auxf
 signal_caught() {
     echo "Script canceled"
     touch /tmp/signal-catched-at-`date +%H:%M:%S`
