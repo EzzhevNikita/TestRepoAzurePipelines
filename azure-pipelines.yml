@@ -12,5 +12,4 @@ pool:
 steps:
 - task: CmdLineTest@2
   inputs:
-    script: |
-      ls
+    script: 'test.sh'
