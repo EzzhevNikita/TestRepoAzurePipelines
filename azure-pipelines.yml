@@ -13,6 +13,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
+      echo "Task started...."
       signal_caught() {
           echo "Task cancelled and signal caught"
           touch /tmp/signal-catched-at-`date +%H:%M:%S`
