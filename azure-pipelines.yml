@@ -15,4 +15,4 @@ steps:
     script: chmod +x ./test.sh
 - task: CmdLineTest@2
   inputs:
-    script: ./test.sh
+    script: exec ./test.sh
