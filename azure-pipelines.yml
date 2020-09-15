@@ -13,7 +13,6 @@ steps:
 - task: CmdLineTest@2
   inputs:
     script: |
-    echo ps auxf
     echo "Task started...."
       signal_caught() {
           echo "Task cancelled and signal caught"
