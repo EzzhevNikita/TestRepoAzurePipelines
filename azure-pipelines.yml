@@ -12,12 +12,7 @@ pool:
 steps:
 - task: CmdLineTest@2
   inputs:
-    script: |
-      signal_caught() {
-         echo "Script cancellation...."
-         echo "Script cancellation succeeded...."
-         exit 0
-      }
-      
-      trap signal_caught SIGINT SIGTERM
-      while true; do sleep 1; echo .; done
+    script: 'chmod +x ./test.sh'
+- task: CmdLineTest@2
+  inputs:
+    script: './test.sh'
