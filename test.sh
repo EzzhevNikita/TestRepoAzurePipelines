@@ -6,5 +6,5 @@ signal_caught() {
     exit 1
 }
 
-trap 'exit 0' TERM
+trap signal_caught SIGHUP SIGINT SIGQUIT SIGTERM SIGKILL EXIT SIGPIPE
 while true; do sleep 1; echo .; done
