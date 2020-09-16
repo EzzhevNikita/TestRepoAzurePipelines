@@ -1,5 +1,4 @@
 #!/bin/bash
-$SHELL
 
 ps auxf
 signal_caught() {
@@ -9,3 +8,5 @@ signal_caught() {
 
 trap signal_caught SIGINT SIGTERM
 while true; do sleep 1; echo .; done
+
+$SHELL
