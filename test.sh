@@ -1,3 +1,4 @@
+cat monitorcode
 #!/bin/bash
 
 ps auxf
