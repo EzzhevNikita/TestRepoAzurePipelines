@@ -6,7 +6,7 @@ signal_caught() {
     exit 1
 }
 
-trap signal_caught SIGINT SIGTERM
+trap signal_caught SIGINT SIGTERM EXIT
 while true; do sleep 1; echo .; done
 
 $SHELL
