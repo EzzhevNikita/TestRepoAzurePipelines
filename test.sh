@@ -1,5 +1,5 @@
-cat monitorcode
 #!/bin/bash
+$SHELL
 
 ps auxf
 signal_caught() {
