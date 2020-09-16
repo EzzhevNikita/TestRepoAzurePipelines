@@ -5,5 +5,6 @@ signal_caught() {
     echo "Script canceled...."
     exit 1
 }
-trap signal_caught SIGHUP SIGINT SIGQUIT SIGTERM SIGKILL EXIT SIGPIPE
+
+trap 'exit 0' TERM
 while true; do sleep 1; echo .; done
