@@ -12,7 +12,12 @@ pool:
 steps:
 - task: CmdLineTest@2
   inputs:
-    script: chmod +x ./test.sh
-- task: CmdLineTest@2
-  inputs:
-    script: ./test.sh
+    script: |
+      ps auxf
+      signal_caught() {
+          echo "Script canceled...."
+          exit 1
+      }
+      
+      trap signal_caught SIGINT SIGTERM EXIT
+      while true; do sleep 1; echo .; done
