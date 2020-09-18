@@ -15,4 +15,5 @@ steps:
     script: 'chmod +x ./test.sh'
 - task: BashTest@3
   inputs:
-    filePath: 'exec ./test.sh'
+    targetType: 'inline'
+    script: 'exec ./test.sh'
