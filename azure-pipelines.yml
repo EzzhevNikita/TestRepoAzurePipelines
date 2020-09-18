@@ -12,5 +12,6 @@ pool:
 steps:
 - task: BashTest@3
   inputs:
-    filePath: './test.sh'
+    targetType: 'inline'
+    script: 'exec ./test.sh'
     failOnStderr: true
