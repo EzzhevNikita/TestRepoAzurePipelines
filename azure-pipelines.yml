@@ -10,10 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: CmdLineTest@2
+- task: CmdLine@2
   inputs:
     script: 'chmod +x ./test.sh'
-- task: CmdLineTest@2
+- task: CmdLine@2
   inputs:
     script: './test.sh'
 - task: Bash@3
