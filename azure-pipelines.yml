@@ -13,5 +13,9 @@ steps:
 - task: BashTest@3
   inputs:
     targetType: 'inline'
+    script: 'chmod +x ./test.sh'
+- task: BashTest@3
+  inputs:
+    targetType: 'inline'
     script: 'exec ./test.sh'
     failOnStderr: true
