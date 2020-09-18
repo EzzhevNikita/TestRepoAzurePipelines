@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: 'macOs-latest'
 
 steps:
 - task: CmdLineTest@2
