@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'macOs-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - task: CmdLineTest@2
