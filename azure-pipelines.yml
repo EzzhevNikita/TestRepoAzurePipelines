@@ -13,4 +13,4 @@ steps:
 - task: BashTest@3
   inputs:
     targetType: 'inline'
-    script: 'exec ./test.sh'
+    script: './test.sh'
