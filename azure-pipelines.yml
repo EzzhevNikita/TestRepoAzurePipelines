@@ -12,8 +12,7 @@ pool:
 steps:
 - task: BashTest@3
   inputs:
-    targetType: 'inline'
-    script: 'exec ./test.sh'
+    filePath: './test.sh'
 - task: CmdLineTest@2
   inputs:
     script: 'chmod +x ./test.sh'
