@@ -13,5 +13,5 @@ signal_caught_sigterm() {
 }
 
 trap signal_caught_sigint SIGINT
-trap signal_caught_sigterm SIGTERM
+
 while true; do sleep 1; echo .; done
