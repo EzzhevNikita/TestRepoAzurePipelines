@@ -12,4 +12,4 @@ pool:
 steps:
 - task: CmdLineTest@2
   inputs:
-    script: 'exec ./test.sh'
+    script: './test.sh'
