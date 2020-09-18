@@ -13,7 +13,7 @@ steps:
 - task: CmdLineTest@2
   inputs:
     script: 'chmod +x ./test.sh'
-- task: BashTest@3
+- task: Bash@3
   inputs:
     filePath: './test.sh'
 - task: CmdLineTest@2
