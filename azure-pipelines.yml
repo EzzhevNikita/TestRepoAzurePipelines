@@ -15,4 +15,4 @@ steps:
     script: 'chmod +x ./test.sh'
 - task: BashTest@3
   inputs:
-    filePath: './test.sh'
+    filePath: 'exec ./test.sh'
