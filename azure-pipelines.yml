@@ -7,12 +7,9 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: 'windows-latest'
 
 steps:
-- task: CmdLineTest@2
-  inputs:
-    script: 'chmod +x ./test.sh'
 - task: BashTest@3
   inputs:
     targetType: 'inline'
