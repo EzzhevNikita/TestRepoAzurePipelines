@@ -7,9 +7,12 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-16.04'
 
 steps:
 - task: CmdLineTest@2
   inputs:
-    script: './test.sh'
+    script: 'chmod +x ./test.sh'
+- task: CmdLineTest@2
+  inputs:
+    script: 'exec ./test.sh'
