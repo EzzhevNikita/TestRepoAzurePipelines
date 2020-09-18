@@ -13,9 +13,6 @@ steps:
 - task: CmdLineTest@2
   inputs:
     script: 'chmod +x ./test.sh'
-- task: CmdLine@2
-  inputs:
-    script: exec ./test.sh
 - task: CmdLineTest@2
   inputs:
     script: exec ./test.sh
