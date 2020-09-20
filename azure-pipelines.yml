@@ -15,7 +15,7 @@ steps:
     script: 'chmod +x ./test.sh'
 - task: CmdLine@2
   inputs:
-    script: './test.sh'
+    script: '/test.sh'
 - task: Bash@3
   inputs:
-    filePath: './test.sh'
+    filePath: '/test.sh'
