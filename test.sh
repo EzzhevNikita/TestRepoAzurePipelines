@@ -1,10 +1,4 @@
 #!/bin/bash
-
-signal_caught_sigint() {
-  echo "Script cancellation by SIGINT...."
-  echo "Script cancellation succeeded...."
-  exit 0
- }
  
 signal_caught_sigterm() {
   echo "Script cancellation by SIGTERM...."
@@ -12,7 +6,21 @@ signal_caught_sigterm() {
   exit 0
 }
 
-trap signal_caught_sigint SIGINT
 trap signal_caught_sigterm SIGTERM
+let counter = 0;
 
-while true; do sleep 1; echo '.'; done
+while true;
+do
+  if [$counter eq 10]
+  then
+    ps -ef | grep 'CmdLine_' | grep -v grep | awk '{print $2}' | xargs -r kill -2
+  fi
+  
+  if [$counter eq 20]
+  then
+    exit 1
+   fi
+  
+  sleep 1;
+  counter = $((counter + 1));
+done
