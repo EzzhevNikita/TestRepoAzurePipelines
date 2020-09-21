@@ -22,5 +22,5 @@ do
    fi
   
   sleep 1;
-  $(( counter++ ));
+  ((i++))
 done
