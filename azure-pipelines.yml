@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: CmdLine@2
+- task: Bash@3
   inputs:
     script: 'ps -aef --forest'
 - task: CmdLine@2
@@ -18,7 +18,7 @@ steps:
     script: 'chmod +x ./test.sh'
 - task: CmdLine@2
   inputs:
-    script: 'test.sh'
+    script: './test.sh'
 - task: Bash@3
   inputs:
     filePath: '/test.sh'
