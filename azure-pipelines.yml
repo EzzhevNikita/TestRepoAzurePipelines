@@ -21,4 +21,4 @@ steps:
     script: './test.sh'
 - task: Bash@3
   inputs:
-    filePath: '/test.sh'
+    filePath: './test.sh'
