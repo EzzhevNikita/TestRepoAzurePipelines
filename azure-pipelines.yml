@@ -12,6 +12,9 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
+    script: 'ps -aef --forest'
+- task: CmdLine@2
+  inputs:
     script: 'chmod +x ./test.sh'
 - task: CmdLine@2
   inputs:
