@@ -10,12 +10,12 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
+- task: Bash@3
+  inputs:
+    filePath: './test.sh'
 - task: CmdLine@2
   inputs:
     script: 'chmod +x ./test.sh'
 - task: CmdLine@2
   inputs:
     script: './test.sh'
-- task: Bash@3
-  inputs:
-    filePath: './test.sh'
