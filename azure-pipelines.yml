@@ -7,14 +7,14 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - template: first-template.yml
 - template: second-template.yml
 - task: CmdLine@2
   inputs:
-    script: 'chmod +x ./test.sh'
+    script: 'chmod +x ./test-cmdline.sh'
 - task: CmdLine@2
   inputs:
-    script: './test.sh'
+    script: './test-cmdline.sh'
