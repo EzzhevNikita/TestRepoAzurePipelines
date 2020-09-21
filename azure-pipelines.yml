@@ -10,13 +10,8 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'ps -aef'
-- task: Bash@3
-  inputs:
-    filePath: './test.sh'
+- template: first-template.yml
+- template: second-template.yml
 - task: CmdLine@2
   inputs:
     script: 'chmod +x ./test.sh'
