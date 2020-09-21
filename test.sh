@@ -7,7 +7,7 @@ signal_caught_sigterm() {
 }
 
 trap signal_caught_sigterm SIGTERM
-counter = 0;
+counter=0;
 
 while true;
 do
@@ -22,5 +22,5 @@ do
    fi
   
   sleep 1;
-  counter = $(($counter + 1));
+  counter = $(( $counter++ ));
 done
