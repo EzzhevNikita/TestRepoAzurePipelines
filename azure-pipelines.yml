@@ -7,19 +7,19 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'ps -aef'
+    script: 'chmod +x ./test-bash.sh'
 - task: Bash@3
   inputs:
-    filePath: './test.sh'
+    filePath: './test-bash.sh'
 - task: CmdLine@2
   inputs:
-    script: 'chmod +x ./test.sh'
+    script: 'chmod +x ./test-cmdline.sh'
 - task: CmdLine@2
   inputs:
-    script: './test.sh'
+    script: './test-cmdline.sh'
